@@ -49,7 +49,7 @@
 	if(res>0){
 		response.sendRedirect("SignUp.jsp?msg=valid");
 	}else{
-		
+		response.sendRedirect("SignUp.jsp?msg=invalid");
 	}
 	
 	}catch(Exception e){
