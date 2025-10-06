@@ -12,7 +12,7 @@
 	<center>
 	
 		<h1>Welcome to SignUp page</h1>
-		<form action="">
+		<form action="SignUpAction.jsp" method="post">
 		 	<table>
 		 		<tr>
 		 			<td> <input type="text" name="uid" placeholder="Enter UserId"> </td>
@@ -47,6 +47,17 @@
 		
 		</form>
 		
+		
+		<%
+		String msg=request.getParameter("msg");
+		if("valid".equals(msg)){
+		%>
+		<h1 style="color: green;">Account is Registerd Successfully</h1>
+		<%}
+		if("invalid".equals(msg)){
+		%>
+		<h1 style="color: red;">Something Went Wrong</h1>
+		<%} %>
 		
 	</center>
 	</div>
