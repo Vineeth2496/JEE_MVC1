@@ -1,11 +1,25 @@
 @charset "UTF-8";
+#container{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
 /*
-.container{
-	height: 100%;
+.img{
+	height: 10vh;
 	width: 50%;
-	background-color: aqua;
+	display: flex;
+	
 }
 */
+.home{
+	height: 10vh;
+	width: 50%;
+	/*background-color: aqua;*/
+	justify-content: center;
+	align-items: center;
+}
+
 body {
 	background-color: gray;
 }
@@ -14,11 +28,17 @@ body {
 	height: 100%;
 	width: 100%;
 	
+}
+.login{
+	background-color: gray;
+	height: 100%;
+	width: 100%;
 	
 }
-
 form {
 	border: 1px solid black;
 	width: 200px;
 	background-color:white; 
+	border-radius: 8px;
+	align-content: center;
 }

@@ -8,8 +8,13 @@
 <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-	
-	<div class="container">
+	<div id="container">
+	<!-- 
+	<div class="img">
+		<img alt="image" src="./images/Laptop.jpg">
+	</div>
+	 -->
+	<div class="home">
 	<center>
 	<h1>Welcome to Home Page</h1>
 	
@@ -19,6 +24,6 @@
 	</center>
 	</div>
 	
-	
+	</div>
 </body>
 </html>

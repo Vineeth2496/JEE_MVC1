@@ -5,11 +5,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Login Page</title>
+<link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-<div class="container">
+<div class="login container">
 <center>
 	<h1>Welcome to Login Page</h1>
+	<form action="">
+	<table>
+		<tr> 
+			<td> <input type="text" name="uid" placeholder="Enter User Id"> </td>
+		</tr>
+		<tr> 
+			<td> <input type="password" name="pa" placeholder="Enter Password"> </td>
+		</tr>
+		<tr> 
+			<td style="text-align: center;"> <input type="submit" value="Login"> </td>
+		</tr>
+	</table>
+	</form>
 </center>
 </div>
 </body>
