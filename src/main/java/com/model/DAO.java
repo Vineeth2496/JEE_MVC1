@@ -22,7 +22,6 @@ public class DAO {
 	
 	public int sigUp(Data d) {
 		int res=0;
-		
 		try {
 			Connection con=DAO.getCon();
 			

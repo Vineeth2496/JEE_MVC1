@@ -27,7 +27,7 @@
 		 			<td> <input type="password" name="pa" placeholder="Enter Password"> </td>
 		 		</tr>
 		 		<tr>
-		 			<td> Enter DOB: <input type="date" name="dob" placeholder="Enter DOB"> </td>
+		 			<td> DOB: <input type="date" name="dob" placeholder="Enter DOB"> </td>
 		 		</tr>
 		 		<tr>
 		 			<td> <input type="text" name="phno" placeholder="Enter Phone No"> </td>
