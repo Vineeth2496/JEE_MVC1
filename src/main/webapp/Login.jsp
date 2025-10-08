@@ -38,7 +38,17 @@
 		if("logout".equals(msg)){
 		%>
 		<h3 style="color: brown;">Successfully Logged Out</h3>
-		<%} %>
+	<%}if("updated".equals(msg)){%>
+		<h3 style="color: blue;">Profile Updated Succuessfully</h3>
+	<%}
+	if("noupdated".equals(msg)){
+	%>
+	<h3 style="color: brown">No Record is Updated</h3>
+	<%} 
+	if("error".equals(msg)){
+	%>
+	<h3 style="color: brown">Something Went Wrong</h3>
+	<%}	%>
 </center>
 </div>
 </body>

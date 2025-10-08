@@ -49,7 +49,7 @@
 				<td> <%= d2.getDob() %>  </td>
 				<td> <%= d2.getPhoneno() %>  </td>
 				<td> <%= d2.getGender() %>  </td>
-				<td> <a href="">Edit</a>  </td>
+				<td> <a href="EditAction.jsp?uid=<%=d2.getUserId() %>">Edit</a>  </td>
 				<td> <a href="">Delete</a>  </td>
 			</tr>
 		</table>

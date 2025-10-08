@@ -123,4 +123,70 @@ public class DAO {
 	}
 	
 	
+	public List fetchForUpdate(Data d) {
+		List li=new Vector();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			RowSetFactory rf=RowSetProvider.newFactory();
+			
+			JdbcRowSet jrs=rf.createJdbcRowSet();
+			jrs.setUrl("jdbc:mysql://localhost:3306/nacs1");
+			jrs.setUsername("root");
+			jrs.setPassword("vine96");
+			
+			jrs.setCommand("select * from jee_mvc1 where user_id=?");
+			jrs.setInt(1, d.getUserId());
+			jrs.execute();
+			
+			Data d2=new Data();
+			
+			while(jrs.next()) {
+				d2.setUserId(jrs.getInt("user_id"));
+				d2.setFullName(jrs.getString("fullname"));
+				d2.setEmail(jrs.getString("email"));
+				d2.setPassword(jrs.getString("password"));
+				d2.setDob(jrs.getString("dob"));
+				d2.setPhoneno(jrs.getLong("phoneno"));
+				d2.setGender(jrs.getString("gender"));
+				
+				li.add(d2);
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return li;
+	}
+	
+	
+	
+	public int update(Data d) {
+		int res=0;
+		try {
+			Connection con=DAO.getCon();
+			
+			PreparedStatement pst=con.prepareStatement("update jee_mvc1 set fullname=?, email=?, password=?, dob=?, phoneno=?, gender=? where user_id=?");
+			pst.setString(1, d.getFullName());
+			pst.setString(2, d.getEmail());
+			pst.setString(3, d.getPassword());
+			pst.setString(4, d.getDob());
+			pst.setLong(5, d.getPhoneno());
+			pst.setString(6, d.getGender());
+			pst.setInt(7, d.getUserId());
+			
+			res=pst.executeUpdate();
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return res;
+	}
+	
+	
 }
