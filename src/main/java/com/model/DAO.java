@@ -188,5 +188,18 @@ public class DAO {
 		return res;
 	}
 	
+	public int delete(Data d) {
+		int res=0;
+		try {
+			Connection con=DAO.getCon();
+			
+			PreparedStatement pst=con.prepareStatement("delete from jee_mvc1 where user_id=?");
+			pst.setInt(1, d.getUserId());
+			res=pst.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res; 
+	}
 	
 }

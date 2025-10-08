@@ -48,7 +48,13 @@
 	if("error".equals(msg)){
 	%>
 	<h3 style="color: brown">Something Went Wrong</h3>
-	<%}	%>
+	<%}	
+	if("delete".equals(msg)){
+	%>
+	<h3 style="color: red">Account Deleted Successfully</h3>
+	<%}if("nodelete".equals(msg)){ %>
+	<h3 style="color: yellow">Account NOT Deleted Successfully</h3>
+	<%} %>
 </center>
 </div>
 </body>

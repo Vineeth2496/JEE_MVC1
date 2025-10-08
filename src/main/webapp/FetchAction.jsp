@@ -50,7 +50,7 @@
 				<td> <%= d2.getPhoneno() %>  </td>
 				<td> <%= d2.getGender() %>  </td>
 				<td> <a href="EditAction.jsp?uid=<%=d2.getUserId() %>">Edit</a>  </td>
-				<td> <a href="">Delete</a>  </td>
+				<td> <a href="DeleteAction.jsp?uid=<%=d2.getUserId() %>">Delete</a>  </td>
 			</tr>
 		</table>
 		<a href="EndAction.jsp">Logout</a>
